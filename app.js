@@ -33,7 +33,6 @@ app.use(express.json())
 app.post("/createUser", async (req,res) => {
 const user = req.body.name;
 
-function doPost(e) {
     var isProduction = false;
     
     var strSimulator  = "https://ipnpb.sandbox.paypal.com/cgi-bin/webscr";
@@ -76,5 +75,4 @@ function doPost(e) {
     {
      //PayPal response INVALID 
     }
-  }
 })
