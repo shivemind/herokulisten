@@ -31,7 +31,7 @@ app.use(express.json())
 //middleware to read req.body.<params>
 //CREATE USER
 app.post("/createUser", async (req,res) => {
-const user = req.body.name;
+// const user = req.body.name;
 
     var isProduction = false;
     
@@ -41,7 +41,7 @@ const user = req.body.name;
     
     if (isProduction)  paypalURL = strLive;
     
-    var payload = "cmd=_notify-validate&" + e.postData.contents;
+    var payload = "cmd=_notify-validate&" + req.body;
   
     var options =
       {
